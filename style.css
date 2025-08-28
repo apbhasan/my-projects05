@@ -1,0 +1,107 @@
+/* Base font */
+body { 
+  font-family: "Hind Madurai", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+}
+
+/* Banner */
+.banner-gradient {
+  background: linear-gradient(135deg, #004d40 0%, #03624f 40%, #0a7b59 100%);
+  min-height: 239px;
+  display: grid;
+  place-items: center;
+}
+
+.banner-title { 
+  font-weight: 700; 
+  font-size: 40px; 
+  line-height: 1.15; 
+}
+
+.banner-subtitle { 
+  font-weight: 600; 
+  font-size: 20px; 
+  opacity: 0.95; 
+}
+
+/* Counters color */
+.copy-green { color: #00A63E; }
+
+/* Buttons */
+.btn-call {
+  background-color: #00A63E;
+  color: white;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  padding: 0.625rem 0;
+  font-weight: 500;
+  width: 100%;
+}
+.btn-call:hover { filter: brightness(0.9); }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2f6;
+  color: #475569;
+  border: 1px solid #e5e7eb;
+}
+
+/* Cards with shadow */
+.card {
+  background: white;
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* default soft shadow */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* hover stronger shadow */
+}
+
+/* Card icon image */
+.card-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Icon button */
+.icon-btn { 
+  width: 36px; 
+  height: 36px; 
+  display: grid; 
+  place-items: center; 
+  border-radius: 999px; 
+  border: 1px solid #e5e7eb; 
+  background: white; 
+}
+.icon-btn:hover { background: #f9fafb; }
+
+/* History item */
+.history-item { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 8px; 
+  padding: 10px 12px; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  background: #fff; 
+}
+.history-title { font-weight: 600; }
+.history-sub { font-size: 12px; color: #64748b; }
+
+/* Mobile */
+@media (max-width: 420px) {
+  .banner-title { font-size: 28px; }
+  .banner-subtitle { font-size: 16px; }
+}
