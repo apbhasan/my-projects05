@@ -17,49 +17,59 @@
 <body class="bg-gray-100 text-gray-800">
 
   <!-- NAVBAR -->
-  <nav class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 flex items-center justify-between">
-        <!-- Left: Logo + Name -->
-        <div class="flex items-center gap-3">
-          <img src="/styles/asset/logo.png" alt="Logo" class="w-9 h-9 rounded-full object-contain border border-gray-200">
-          <div class="leading-tight">
-            <div class="font-bold text-lg">Emergency</div>
-            <div class="font-bold text-lg text-red-600">Service</div>
-          </div>
-        </div>
-
-        <!-- Right: Counters -->
-        <div class="flex items-center gap-5 text-sm">
-          <button id="navHeart" class="flex items-center gap-1.5">
-            <img src="/styles/asset/heart.png" class="w-5 h-5" alt="Heart">
-            <span id="heartCount" class="font-semibold">0</span>
-          </button>
-
-          <div class="flex items-center gap-1.5">
-            <img src="/styles/asset/coin.png" class="w-5 h-5" alt="Coin">
-            <span id="coinCount" class="font-semibold">100</span>
-          </div>
-
-          <button id="navCopy" class="flex items-center gap-1.5">
-            <img src="/styles/asset/copy1.png" class="w-5 h-5" alt="Copy">
-            <span id="copyCount" class="font-semibold">0</span>
-          </button>
+<nav class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-14 sm:h-16 flex items-center justify-between">
+      
+      <!-- Left: Logo + Name -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <img src="/styles/asset/logo.png" alt="Logo" 
+             class="w-7 h-7 sm:w-9 sm:h-9 rounded-full object-contain border border-gray-200">
+        <div class="leading-tight">
+          <div class="font-bold text-base sm:text-lg">Emergency</div>
+          <div class="font-bold text-base sm:text-lg text-red-600">Service</div>
         </div>
       </div>
+
+      <!-- Right: Counters -->
+      <div class="flex items-center gap-3 sm:gap-5 text-xs sm:text-sm">
+        
+        <!-- Heart -->
+        <button id="navHeart" class="flex items-center gap-1 sm:gap-1.5">
+          <img src="/styles/asset/heart.png" class="w-4 h-4 sm:w-5 sm:h-5" alt="Heart">
+          <span id="heartCount" class="font-semibold">0</span>
+        </button>
+
+        <!-- Coin -->
+        <div class="flex items-center gap-1 sm:gap-1.5">
+          <img src="/styles/asset/coin.png" class="w-4 h-4 sm:w-5 sm:h-5" alt="Coin">
+          <span id="coinCount" class="font-semibold">100</span>
+        </div>
+
+        <!-- Copy -->
+        <!-- Navbar Copy Button -->
+<button id="navCopy" class="flex items-center gap-1 sm:gap-1.5">
+  <span class="text-lg">📋</span>  <!-- ekhane image er jaygay emoji -->
+  <span id="copyCount" class="font-semibold">0</span>
+</button>
+
+
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- BANNER -->
 <header class="banner-gradient">
   <div class="max-w-4xl mx-auto px-4 py-10 text-center text-white">
     <div class="mx-auto mb-4 w-16 h-16 rounded-full bg-white/15 grid place-items-center border border-white/30">
       <!-- Replace emoji with logo image -->
-      <img src="styles/asset/logo-dark.png" alt="Logo" class="w-10 h-10 object-contain"/>
+      <img src="styles/asset/logo-dark.png" alt="Logo" class="w-15 h-15 object-contain"/>
     </div>
     <h1 class="banner-title">Emergency Service Directory</h1>
     <p class="banner-subtitle">
-      Government Emergency Services at Your Fingertips — A Project by Government of the People’s Republic of Bangladesh
+      Government Emergency Services at Your Fingertip — A Project by Government of the People’s Republic of Bangladesh
     </p>
   </div>
 </header>

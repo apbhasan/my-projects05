@@ -1,36 +1,69 @@
 /* Base font */
 body { 
   font-family: "Hind Madurai", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+  margin: 0;
+  padding: 0;
 }
 
 /* Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh; 
+  padding: 0 15px; 
+  box-sizing: border-box;
+  overflow: hidden; /* prevent overflow in mobile */
+}
+
 .banner-gradient {
   background: linear-gradient(135deg, #004d40 0%, #03624f 40%, #0a7b59 100%);
   min-height: 239px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .banner-title { 
   font-weight: 700; 
   font-size: 40px; 
   line-height: 1.15; 
+  margin: 10px 0;
 }
 
 .banner-subtitle { 
-  font-weight: 600; 
-  font-size: 20px; 
-  opacity: 0.95; 
+  white-space: normal; /* allow wrap in mobile */
+  text-align: center;
+  width: 100%;
+  display: block;
+  max-width: 600px; /* prevent too wide in desktop */
+  margin: 0 auto;
 }
 
-/* Counters color */
-.copy-green { color: #00A63E; }
+.banner img {
+  max-width: 120px;  /* logo size control */
+  height: auto; 
+}
+
+/* Responsive text */
+.banner h1, 
+.banner p {
+  word-wrap: break-word;
+  font-size: clamp(18px, 4vw, 32px);
+  max-width: 90%;
+}
+
 
 /* Buttons */
 .btn-call {
-  background-color: #00A63E;
+  background-color: #03624f;
   color: white;
-  border-radius: 999px;
+  border-radius: 9px;
   display: grid;
   place-items: center;
   padding: 0.625rem 0;
@@ -54,24 +87,24 @@ body {
 /* Cards with shadow */
 .card {
   background: white;
-  border-radius: 1rem; /* rounded-2xl */
+  border-radius: 1rem;
   border: 1px solid #e5e7eb;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   transition: transform .15s ease, box-shadow .15s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* default soft shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* hover stronger shadow */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Card icon image */
 .card-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px; /* bigger icons */
+  height: 60px;
   object-fit: contain;
 }
 
@@ -100,8 +133,40 @@ body {
 .history-title { font-weight: 600; }
 .history-sub { font-size: 12px; color: #64748b; }
 
-/* Mobile */
-@media (max-width: 420px) {
-  .banner-title { font-size: 28px; }
-  .banner-subtitle { font-size: 16px; }
+/* ✅ Mobile view fix - for iPhone 14 Pro and below */
+@media (max-width: 430px) {
+  .banner-gradient {
+    padding: 40px 15px;
+    min-height: auto; /* remove fixed height */
+  }
+
+  .banner img {
+    max-width: 80px; /* logo smaller */
+  }
+
+  .banner-title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal; /* always wrap */
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;   /* mobile gap chhoto */
+}
+
+
+
