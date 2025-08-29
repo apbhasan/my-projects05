@@ -7,8 +7,6 @@ const coinDisplay = document.getElementById("coinCount");
 const copyDisplay = document.getElementById("copyCount");
 const historyList = document.getElementById("historyList");
 const clearBtn = document.getElementById("clearHistoryBtn");
-const toastWrap = document.getElementById("toast");
-const toastMsg = document.getElementById("toastMsg");
 const cardGrid = document.getElementById("cardGrid");
 
 // Services data with image icons and English name only
@@ -23,14 +21,6 @@ const services = [
   {icon:"styles/asset/brac.png", name:"Brac", en:"Brac Helpline", number:"16445", category:"NGO"},
   {icon:"styles/asset/emergency.png", name:"Railway", en:"Bangladesh Railway Helpline", number:"163", category:"Travel"}
 ];
-
-// Toast
-function showToast(msg) {
-  toastMsg.textContent = msg;
-  toastWrap.classList.remove("hidden");
-  clearTimeout(showToast._t);
-  showToast._t = setTimeout(() => toastWrap.classList.add("hidden"), 1800);
-}
 
 // Update navbar counters
 function updateCounters() {
@@ -123,7 +113,7 @@ function renderCards() {
       copyText(services[idx].number);
       copyCount++;
       updateCounters();
-      showToast("Number copied");
+      alert("Number copied to the clipboard");
     });
   });
 
@@ -132,13 +122,15 @@ function renderCards() {
     btn.addEventListener("click", (e) => {
       const idx = Number(e.currentTarget.dataset.index);
       const svc = services[idx];
+
       if (coinCount < 20) {
-        showToast("Not enough coins");
+        alert("You have not enough coins for call");
         return;
       }
+
       coinCount -= 20;
       updateCounters();
-      showToast(`20 coins used. Calling ${svc.en}`);
+      alert(`📞 Calling... ${svc.en} ${svc.number}...`);
       addHistoryItem(svc, new Date().toLocaleTimeString());
     });
   });
