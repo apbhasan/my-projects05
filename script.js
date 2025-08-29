@@ -9,7 +9,7 @@ const historyList = document.getElementById("historyList");
 const clearBtn = document.getElementById("clearHistoryBtn");
 const cardGrid = document.getElementById("cardGrid");
 
-// Services data with image icons and English name only
+
 const services = [
   {icon:"styles/asset/emergency.png", name:"Emergency", en:"National Emergency Number", number:"999", category:"All"},
   {icon:"styles/asset/police.png", name:"Police", en:"Police Helpline Number", number:"999", category:"Police"},
@@ -22,14 +22,14 @@ const services = [
   {icon:"styles/asset/emergency.png", name:"Railway", en:"Bangladesh Railway Helpline", number:"163", category:"Travel"}
 ];
 
-// Update navbar counters
+
 function updateCounters() {
   heartDisplay.textContent = heartCount;
   coinDisplay.textContent = coinCount;
   copyDisplay.textContent = copyCount;
 }
 
-// Add history item
+
 function addHistoryItem(service, timeStr) {
   const item = document.createElement("div");
   item.className = "history-item";
@@ -45,7 +45,7 @@ function addHistoryItem(service, timeStr) {
   historyList.prepend(item);
 }
 
-// Clipboard copy
+
 function copyText(text) {
   try {
     if (navigator.clipboard && window.isSecureContext) {
@@ -64,7 +64,7 @@ function copyText(text) {
   }
 }
 
-// Render cards
+
 function renderCards() {
   cardGrid.innerHTML = services.map((s, i) => `
     <article class="card">
@@ -98,7 +98,7 @@ function renderCards() {
     </article>
   `).join("");
 
-  // Heart click
+  
   cardGrid.querySelectorAll("[data-action='fav']").forEach(btn => {
     btn.addEventListener("click", () => {
       heartCount++;
@@ -106,7 +106,7 @@ function renderCards() {
     });
   });
 
-  // Copy click
+  
   cardGrid.querySelectorAll("[data-action='copy']").forEach(btn => {
     btn.addEventListener("click", async (e) => {
       const idx = Number(e.currentTarget.dataset.index);
@@ -117,7 +117,7 @@ function renderCards() {
     });
   });
 
-  // Call click
+  
   cardGrid.querySelectorAll("[data-action='call']").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const idx = Number(e.currentTarget.dataset.index);
@@ -136,9 +136,9 @@ function renderCards() {
   });
 }
 
-// Clear history
+
 clearBtn.addEventListener("click", () => { historyList.innerHTML = ""; });
 
-// Initialize
+
 updateCounters();
 renderCards();
