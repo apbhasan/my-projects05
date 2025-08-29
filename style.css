@@ -1,11 +1,11 @@
-/* Base font */
+
 body { 
   font-family: "Hind Madurai", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
   margin: 0;
   padding: 0;
 }
 
-/* Banner */
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ body {
   min-height: 100vh; 
   padding: 0 15px; 
   box-sizing: border-box;
-  overflow: hidden; /* prevent overflow in mobile */
+  overflow: hidden; 
 }
 
 .banner-gradient {
@@ -37,20 +37,20 @@ body {
 }
 
 .banner-subtitle { 
-  white-space: normal; /* allow wrap in mobile */
+  white-space: normal; 
   text-align: center;
   width: 100%;
   display: block;
-  max-width: 600px; /* prevent too wide in desktop */
+  max-width: 600px; 
   margin: 0 auto;
 }
 
 .banner img {
-  max-width: 120px;  /* logo size control */
+  max-width: 120px;  
   height: auto; 
 }
 
-/* Responsive text */
+
 .banner h1, 
 .banner p {
   word-wrap: break-word;
@@ -59,7 +59,7 @@ body {
 }
 
 
-/* Buttons */
+
 .btn-call {
   background-color: #03624f;
   color: white;
@@ -72,7 +72,7 @@ body {
 }
 .btn-call:hover { filter: brightness(0.9); }
 
-/* Badges */
+
 .badge {
   display: inline-block;
   font-size: 12px;
@@ -84,7 +84,7 @@ body {
   border: 1px solid #e5e7eb;
 }
 
-/* Cards with shadow */
+
 .card {
   background: white;
   border-radius: 1rem;
@@ -101,14 +101,14 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Card icon image */
+
 .card-icon {
-  width: 60px; /* bigger icons */
+  width: 60px; 
   height: 60px;
   object-fit: contain;
 }
 
-/* Icon button */
+
 .icon-btn { 
   width: 36px; 
   height: 36px; 
@@ -120,7 +120,7 @@ body {
 }
 .icon-btn:hover { background: #f9fafb; }
 
-/* History item */
+
 .history-item { 
   display: flex; 
   justify-content: space-between; 
@@ -133,15 +133,15 @@ body {
 .history-title { font-weight: 600; }
 .history-sub { font-size: 12px; color: #64748b; }
 
-/* ✅ Mobile view fix - for iPhone 14 Pro and below */
+
 @media (max-width: 430px) {
   .banner-gradient {
     padding: 40px 15px;
-    min-height: auto; /* remove fixed height */
+    min-height: auto; 
   }
 
   .banner img {
-    max-width: 80px; /* logo smaller */
+    max-width: 80px; 
   }
 
   .banner-title {
@@ -152,7 +152,7 @@ body {
   .banner-subtitle {
     font-size: 14px;
     line-height: 1.4;
-    white-space: normal; /* always wrap */
+    white-space: normal; 
   }
 
   .card-icon {
@@ -165,7 +165,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;   /* mobile gap chhoto */
+  padding: 8px 12px;   
 }
 
 
