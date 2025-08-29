@@ -69,28 +69,28 @@ function renderCards() {
   cardGrid.innerHTML = services.map((s, i) => `
     <article class="card">
       <div class="flex justify-between items-start">
-        <!-- Left: icon -->
+        
         <img src="${s.icon}" alt="${s.en}" class="w-12 h-12 rounded-xl border border-gray-200 object-contain bg-gray-50">
 
-        <!-- Right: heart button -->
+        
         <button class="icon-btn" data-action="fav" data-index="${i}" title="Add to favourites">🤍</button>
       </div>
 
-      <!-- Below: English name & category -->
+      
       <div class="mt-3">
         <div class="font-semibold text-lg">${s.en}</div>
         <div class="text-sm text-gray-500">${s.name}</div>
       </div>
 
-      <!-- Number -->
+      
       <div class="mt-3 text-2xl font-bold">${s.number}</div>
 
-      <!-- Badge -->
+      
       <div class="mt-2">
         <span class="badge">${s.category}</span>
       </div>
 
-      <!-- Buttons -->
+      
       <div class="mt-4 flex items-center gap-3">
         <button class="flex-1 border border-gray-200 rounded-xl py-2.5 font-medium grid place-items-center gap-2" data-action="copy" data-index="${i}">📋 Copy</button>
         <button class="flex-1 btn-call rounded-xl py-2.5 font-medium grid place-items-center gap-2" data-action="call" data-index="${i}">📞 Call</button>
